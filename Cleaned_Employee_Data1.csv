@@ -1,0 +1,15 @@
+Employee_ID,Name,Age,Department,Salary,Experience_Years,Performance_Score,Projects_Completed,Joining_Date,City,TotalValue,ExperienceLevel,yearsinCompany
+E001,Ram,25.0,IT,45000.0,2.0,85.0,5.0,2021-05-10,Kathmandu,3825000.0,Junior,5
+E002,Sita,28.0,HR,40000.0,4.0,90.0,6.0,2019-03-15,Pokhara,3600000.0,Mid,7
+E003,Hari,28.0,IT,50000.0,5.0,88.0,7.0,2018-07-20,Lalitpur,4400000.0,Mid,8
+E004,Gita,30.0,Finance,57500.0,6.0,92.0,8.0,2017-01-12,Butwal,5290000.0,Senior,9
+E005,Shyam,26.0,IT,48000.0,4.0,80.0,4.0,2022-02-01,Kathmandu,3840000.0,Mid,4
+E006,Rita,29.0,HR,42000.0,3.0,82.0,5.0,2020-06-18,Unknown,3430000.0,Mid,6
+E007,Bikash,31.0,Finance,55000.0,7.0,95.0,9.0,2016-11-25,Lalitpur,5225000.0,Senior,10
+E008,Anita,27.0,IT,47000.0,3.0,87.0,6.0,2021-09-30,Pokhara,4089000.0,Mid,5
+E010,Mina,32.0,Finance,60000.0,8.0,96.0,10.0,2015-08-19,Butwal,5760000.0,Senior,11
+E011,Sabin,26.0,IT,47200.0,2.0,78.0,3.0,2022-03-14,Kathmandu,3681600.0,Junior,4
+E012,Pooja,28.0,HR,41000.0,4.0,85.0,,2019-12-22,Pokhara,3485000.0,Mid,7
+E013,Deepak,29.0,Finance,53000.0,5.0,89.0,7.0,2018-05-17,Lalitpur,4717000.0,Mid,8
+E014,Nisha,27.0,IT,46000.0,3.0,82.0,5.0,2021-07-11,Unknown,3772000.0,Mid,5
+E015,Ramesh,33.0,Finance,62000.0,9.0,98.0,11.0,2014-10-09,Butwal,6076000.0,Senior,12
