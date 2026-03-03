@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+from scipy import stats #z score module
 np.random.seed(42)
 
 n = 50
@@ -23,6 +23,9 @@ df["Price"] = (
     df["Mileage"] * 5 +
     df["Brand_Value"] * 300000
 )
+
+# print(df)
+#part1 : 
 
 # averagePrice 
 averagePrice  = np.mean(df["Price"]) 
@@ -50,3 +53,13 @@ print(f"the correlation matrix is : {correlection}")
 print()
 
 
+#part2  : 
+# Mileage column normalize गर।
+mileage_normalize = (df["Mileage"] - np.min(df["Mileage"]))/ (np.max(df["Mileage"] - np.min(df["Mileage"])))
+print(f"The normalized mileage is : \n {mileage_normalize}")
+
+
+# Z-score निकाल Horsepower को।
+# zScore = stats.zscore(df["Horsepower"])NUMPY TYPE CHECK
+df["Horsepower"] = stats.zscore(df["Horsepower"])
+print(f"the z score of horsepower is : \n {df}")
