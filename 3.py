@@ -37,4 +37,16 @@ print()
 # Age > 10 भएका कारहरूको average price निकाल।
 AgeGreaterThan10  = df[df["Age"] > 10]["Price"].mean()
 print(f"The car age > 10 average  price are : \n {AgeGreaterThan10}")
+print()
+
+# Brand_Value अनुसार groupby गरेर average price निकाल।
+brandValueBy= df.groupby("Brand_Value")["Price"].mean() 
+print(F"The brand value by average price is \n : {brandValueBy}")
+print()
+
+# Correlation matrix निकाल।
+correlection  = df.corr(numeric_only=True)
+print(f"the correlation matrix is : {correlection}")
+print()
+
 
