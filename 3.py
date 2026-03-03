@@ -33,3 +33,8 @@ print()
 top5 = df.sort_values("Price",ascending=False).head(5) 
 print(f"top 5 expensive car is :\n {top5}")
 print()
+
+# Age > 10 भएका कारहरूको average price निकाल।
+AgeGreaterThan10  = df[df["Age"] > 10]["Price"].mean()
+print(f"The car age > 10 average  price are : \n {AgeGreaterThan10}")
+
