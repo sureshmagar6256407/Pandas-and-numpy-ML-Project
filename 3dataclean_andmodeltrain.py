@@ -2,6 +2,9 @@
 import numpy as np
 from scipy import stats #z score module
 np.random.seed(42)
+from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LinearRegression 
+from sklearn.metrics import mean_squared_error , r2_score,root_mean_squared_error
 
 n = 50
 
@@ -66,10 +69,54 @@ print(f"the z score of horsepower is : \n {df}")
 
 #  manual feature scaling गर।
 feature_cols = ["Engine_Size", "Horsepower", "Age", "Mileage", "Brand_Value"]
-scaled_df = (df[feature_cols] - df[feature_cols].min()) / (df[feature_cols].max() - df[feature_cols].min())
-scaled_df.columns = [f"{col}_scaled" for col in feature_cols]
+df[feature_cols] = (df[feature_cols] - df[feature_cols].min())/ (df[feature_cols].max() - df[feature_cols].min())
 
 print("manual feature scaling (first 5 rows):")
-print(scaled_df.head())
+print(df)
+
+# 75th percentile price निकाल।
+p75 = np.percentile(df["Price"],75) 
+print(f"75 percentile price is : {p75}")
 
 
+# Outlier detect गर (IQR method use गरेर)।
+Q1 = df["Price"].quantile(0.25)
+Q3 = df["Price"].quantile(0.75)
+IQR = Q3 - Q1
+
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+outliers = df[(df["Price"] < lower_bound) | (df["Price"] > upper_bound)]
+
+print(f"Price IQR lower bound: {lower_bound}")
+print(f"Price IQR upper bound: {upper_bound}")
+print("Outliers based on IQR:")
+print(outliers)
+print(f"Total outliers: {len(outliers)}")
+
+
+# Part 3: Machine Learning (Advanced Linear Regression)  
+# features and target  
+X  = df[ ["Engine_Size", "Horsepower", "Age", "Mileage", "Brand_Value"]]
+y  = df["Price"]
+
+
+#data split  
+X_train, X_test , y_train ,y_test = train_test_split(X,y , test_size=0.2 , random_state=42)
+
+#train the model 
+model = LinearRegression()
+model.fit(X_train,y_train)
+
+#predict model and mse and r2 score 
+y_pred  = model.predict(X_test)
+print(f"the predict value is : {y_pred}")
+print(f"The acutal value is {y_test}")
+print(f"the mse is : {mean_squared_error(y_test,y_pred)}") 
+print(f"The r2 score is : {r2_score(y_test,y_pred)}")
+
+
+# intercept 
+print(f"The intercept is : {model.intercept_}")
+print(f"the Root mean square is {root_mean_squared_error(y_test,y_pred)}")
