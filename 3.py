@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import numpy as np
 from scipy import stats #z score module
 np.random.seed(42)
@@ -63,3 +63,13 @@ print(f"The normalized mileage is : \n {mileage_normalize}")
 # zScore = stats.zscore(df["Horsepower"])NUMPY TYPE CHECK
 df["Horsepower"] = stats.zscore(df["Horsepower"])
 print(f"the z score of horsepower is : \n {df}")
+
+#  manual feature scaling गर।
+feature_cols = ["Engine_Size", "Horsepower", "Age", "Mileage", "Brand_Value"]
+scaled_df = (df[feature_cols] - df[feature_cols].min()) / (df[feature_cols].max() - df[feature_cols].min())
+scaled_df.columns = [f"{col}_scaled" for col in feature_cols]
+
+print("manual feature scaling (first 5 rows):")
+print(scaled_df.head())
+
+
