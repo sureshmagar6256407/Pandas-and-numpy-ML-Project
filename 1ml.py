@@ -39,4 +39,7 @@ print("Mean Squared Error:",mse)
 print("R-squared Score:",r2)
 
 #save the model  
-jlb.dump(model,"employee_salary_model1.pkl")
+jlb.dump(model,"employee_salary_model1.pkl")  
+
+new  = model.predict([[5 , 4,1,2]])
+print(new)
