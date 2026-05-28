@@ -1,10 +1,13 @@
 import numpy   
+import matplotlib.pyplot as plt 
 # from scipy import stats
 # speed  = [99,86,87,88,111,86,103,87,94,78,77,85,86]
 # x    = numpy.mean(speed)
 # print(x)
+
 # y   = numpy.median(speed)
 # print(f"the speed of  median is {y}")
+
 # z  = stats.mode(speed)
 # print(f"the speed of mode is {z}")
 
@@ -39,6 +42,19 @@ import numpy
 
 
 #PERCENTILES
-ages= [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
-x = numpy.percentile(ages,90)
+# ages= [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
+# x = numpy.percentile(ages,90)
+# print(x)
+
+
+
+
+#DATA DISTRIBUTION  
+x  = numpy .random.uniform(0.0 , 5.0, 250)  
+plt.hist(x,5)  
+plt.show()
 print(x)
+
+y = numpy.random.uniform(0.0, 5.0 , 100000)  
+plt.hist(y,5)  
+plt.show()
