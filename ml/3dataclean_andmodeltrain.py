@@ -5,6 +5,7 @@ np.random.seed(42)
 from sklearn.model_selection import train_test_split 
 from sklearn.linear_model import LinearRegression 
 from sklearn.metrics import mean_squared_error , r2_score,root_mean_squared_error
+import matplotlib.pyplot as plt 
 
 n = 50
 
@@ -120,3 +121,11 @@ print(f"The r2 score is : {r2_score(y_test,y_pred)}")
 # intercept 
 print(f"The intercept is : {model.intercept_}")
 print(f"the Root mean square is {root_mean_squared_error(y_test,y_pred)}")
+
+
+plt.scatter(y_test,y_pred)
+plt.xlabel("Actual Price")  
+plt.ylabel("Predicted Price")  
+plt.title("Actual vs Predicted Price")
+plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')  # Line for perfect predictions
+plt.show()
