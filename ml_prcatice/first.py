@@ -1,1 +1,1 @@
-print("hello world")
+name  = if (name == "suresh pun magar")
