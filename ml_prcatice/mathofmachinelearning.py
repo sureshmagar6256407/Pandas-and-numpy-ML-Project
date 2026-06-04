@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 from scipy import stats
 # from scipy import stats
 # speed  = [99,86,87,88,111,86,103,87,94,78,77,85,86]
-# x    = numpy.mean(speed)
+# x    = numpy.mean(speed) #mean -the average of value
 # print(x)
 
 # y   = numpy.median(speed)
-# print(f"the speed of  median is {y}")
+# print(f"the speed of  median is {y}") #meadian- the mid point value
 
-# z  = stats.mode(speed)
+# z  = stats.mode(speed) #mode - the most common value 
 # print(f"the speed of mode is {z}")
 
 
@@ -18,14 +18,14 @@ from scipy import stats
 
 # #low standard deviation
 # import  numpy
-# speed = [86,87,88,86,87,85,86] 
+# speed = [86,87,88,86,87,85,86] #low SD is the value  which are close to the mean value
 # x  = numpy.std(speed)
 # print(x)
 
 # #high standard deviation
 # import numpy
 # speed = [32,111,138,28,59,77,97]
-# y = numpy.std(speed)
+# y = numpy.std(speed) #high SD is the value which are far from the mean value
 # print(y)
 
 
@@ -35,7 +35,7 @@ from scipy import stats
 #VARIENCE
 # import numpy
 # speed = [32,111,138,28,59,77,97]
-# x = numpy.var(speed)
+# x = numpy.var(speed) # variance is the average of the squared differences from the mean
 # print(x)
 
 
@@ -44,7 +44,7 @@ from scipy import stats
 
 #PERCENTILES
 # ages= [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
-# x = numpy.percentile(ages,90)
+# x = numpy.percentile(ages,90) #percentiles is the value below which a given percentage of observations in a group of observations falls
 # print(x)
 
 
@@ -132,7 +132,7 @@ def first_analysis() :
 first_analysis()
 """
 
-""""""
+"""
 import matplotlib.pyplot as plt 
 from scipy import stats
 x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
@@ -144,3 +144,4 @@ mymodel  = list(map(myfunc,x))
 plt.scatter(x,y)
 plt.plot(x,mymodel)
 plt.show()
+"""
