@@ -100,6 +100,17 @@ print(arr.shape)
 
 
 """
-#size is  use for  find how  much item in array"""
 arr  = np.arange(1,10,1)
 print(arr.size)
+#size is  use for  find how  much item in array
+"""
+
+"""'
+mathematical operation on array
+"""
+import  numpy as np  
+arr = np.array([1,2,3,4,5])
+print(arr+3)
+print(arr-2)
+print(arr*2)
+print(arr/1)
