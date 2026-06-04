@@ -51,6 +51,13 @@ print(fill_array)
 
 """
 #arange  is like the loop but it's python numpy loop
-"""
 arr  = np.arange(1,11,2) 
 print(arr)
+"""
+
+""" 
+#creating identity matices 
+#eye(size) first when we give size its make the 1 center and all side 0
+"""
+identity  = np.eye(3)  
+print(identity)
