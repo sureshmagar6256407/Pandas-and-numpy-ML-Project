@@ -58,6 +58,16 @@ print(arr)
 """ 
 #creating identity matices 
 #eye(size) first when we give size its make the 1 center and all side 0
-"""
 identity  = np.eye(3)  
 print(identity)
+"""
+
+
+"""
+#astype  - astype is use to change the number  onto the flot interger as it data type
+
+"""
+arr  = np.array([2,3,4,5,6])
+int_arr  = arr.astype(float)
+print(arr)
+print(int_arr)
