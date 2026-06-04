@@ -65,9 +65,16 @@ print(identity)
 
 """
 #astype  - astype is use to change the number  onto the flot interger as it data type
-
-"""
 arr  = np.array([2,3,4,5,6])
 int_arr  = arr.astype(float)
 print(arr)
 print(int_arr)
+"""
+
+
+"""
+#dtype   - dtype use for data type of variable
+"""
+ar = np.arange(1,10,1)
+print(ar)
+print(ar.dtype)
