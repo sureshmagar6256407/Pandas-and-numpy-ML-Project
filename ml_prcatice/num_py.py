@@ -83,12 +83,17 @@ print(ar.dtype)
 
 """
 ndim  - uses for find the dimmensiona of array
-
-"""
-
 arr1  = np.full((1,2),4)
 arr2= np.zeros(3)
 print(arr1)
 print(arr2)
 print(arr1.ndim)
 print(arr2.ndim)
+"""
+
+"""
+#shape is use for row and column 
+"""
+arr = np.array([[1,2,3],
+                [3,4,5]])
+print(arr.shape)
