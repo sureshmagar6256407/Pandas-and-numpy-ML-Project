@@ -93,7 +93,13 @@ print(arr2.ndim)
 
 """
 #shape is use for row and column 
-"""
 arr = np.array([[1,2,3],
                 [3,4,5]])
 print(arr.shape)
+"""
+
+
+"""
+#size is  use for  find how  much item in array"""
+arr  = np.arange(1,10,1)
+print(arr.size)
