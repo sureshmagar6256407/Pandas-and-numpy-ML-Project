@@ -43,7 +43,14 @@ print(ones_array)
 
 
 """
-#fill array 
-"""
+#full array  you need to pass shape and which value do you want to fill there
 fill_array = np.full((2,3),6)
 print(fill_array)
+"""
+
+
+"""
+#arange  is like the loop but it's python numpy loop
+"""
+arr  = np.arange(1,11,2) 
+print(arr)
