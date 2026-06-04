@@ -16,7 +16,17 @@ print(arr_2d)
 
 """
 # three dimensional array
-"""
 multi_dimensional  = np.array([[[1,2,3],
                                 [4,5,6]]])
 print(multi_dimensional)
+"""
+
+
+""""
+#with deafault value where all value are 0
+"""
+zeros_array  = np.zeros([3,4])
+zeros  = np.zeros(4)
+print(zeros)
+print()
+print(zeros_array)
