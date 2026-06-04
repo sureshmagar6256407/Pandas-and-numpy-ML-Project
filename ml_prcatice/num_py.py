@@ -107,10 +107,24 @@ print(arr.size)
 
 """'
 mathematical operation on array
-"""
 import  numpy as np  
 arr = np.array([1,2,3,4,5])
 print(arr+3)
 print(arr-2)
 print(arr*2)
 print(arr/1)
+"""
+
+"""
+agg_fuction
+"""
+import numpy as np 
+arr = np.arange(1,10,1)
+print(arr)
+print(np.sum(arr))
+print(np.min(arr))
+print(np.max(arr))
+print(np.mean(arr))
+print(np.median(arr))
+print(np.var(arr))
+print(np.std(arr))
