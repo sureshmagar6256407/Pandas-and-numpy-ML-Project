@@ -34,10 +34,16 @@ print(zeros_array)
 
 """
 #ones  
-
-"""
 ones_array = np.ones((3,4))
 one  = np.ones(3)
 print(one)
 print()
 print(ones_array)
+"""
+
+
+"""
+#fill array 
+"""
+fill_array = np.full((2,3),6)
+print(fill_array)
