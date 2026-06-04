@@ -24,9 +24,20 @@ print(multi_dimensional)
 
 """"
 #with deafault value where all value are 0
-"""
 zeros_array  = np.zeros([3,4])
 zeros  = np.zeros(4)
 print(zeros)
 print()
 print(zeros_array)
+"""
+
+
+"""
+#ones  
+
+"""
+ones_array = np.ones((3,4))
+one  = np.ones(3)
+print(one)
+print()
+print(ones_array)
