@@ -141,12 +141,22 @@ print(np.std(arr))
 # print(np.nanmean(arr))
 
 
-import numpy as np 
-arr = np.array([1,2,3,4])
-print(arr[1])
-print(arr[3])
+# import numpy as np 
+# arr = np.array([1,2,3,4])
+# print(arr[1])
+# print(arr[3])
 
+# arr1 = np.array([[10,11,12,13] , 
+#                  [14,15,16,17]])
+# print(np.nansum(arr1,axis=1))
+# print(arr1[0,2])
+
+
+
+import numpy as np  
 arr1 = np.array([[10,11,12,13] , 
-                 [14,15,16,17]])
-print(np.nansum(arr1,axis=1))
-print(arr1[0,2])
+                 [14,15,16,17],
+                 [39,90,40,60]])
+print(np.sum(arr1,axis= 0))#it's column sum  
+print(np.sum(arr1,axis=1)) #it's row sum  
+print(arr1[1,2])
