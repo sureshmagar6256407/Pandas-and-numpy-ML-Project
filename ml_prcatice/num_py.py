@@ -162,11 +162,19 @@ print(np.std(arr))
 # print(arr1[1,2])
 
 
-arr1 = np.array([[10,11,12,13] , 
-                 [14,15,16,17],
-                 [39,90,40,60]])
-arr = np.array([1,42,5,20,39,49,20,503,29])
-print(arr[[4,-2]])
+# arr1 = np.array([[10,11,12,13] , 
+#                  [14,15,16,17],
+#                  [39,90,40,60]])
+# arr = np.array([1,42,5,20,39,49,20,503,29])
+# print(arr[[4,-2]])
 
-print(arr1[2,[0,2]])
-print(arr1[0,[2,3]])
+# print(arr1[2,[0,2]])
+# print(arr1[0,[2,3]])
+
+
+import numpy as np  
+arr = np.arange(1,20,1)
+print(arr[arr > 10])
+arr1  = np.array ([[39,492,50,38,29] , 
+                    [94,29,60,29,60] ])
+print(arr1 [arr1 > 50])
