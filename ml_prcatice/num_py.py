@@ -117,7 +117,6 @@ print(arr/1)
 
 """
 agg_fuction
-"""
 import numpy as np 
 arr = np.arange(1,10,1)
 print(arr)
@@ -128,3 +127,26 @@ print(np.mean(arr))
 print(np.median(arr))
 print(np.var(arr))
 print(np.std(arr))
+"""
+
+  
+# arr  = np.array ( [[10,2,49,34] , 
+#                    [49,29,50,19]])
+
+# print(np.nansum(arr))
+# print(np.nanmin(arr))
+# print(np.nanmax(arr))
+# print(np.nanvar(arr))
+# print(np.nanstd(arr))
+# print(np.nanmean(arr))
+
+
+import numpy as np 
+arr = np.array([1,2,3,4])
+print(arr[1])
+print(arr[3])
+
+arr1 = np.array([[10,11,12,13] , 
+                 [14,15,16,17]])
+print(np.nansum(arr1,axis=1))
+print(arr1[0,2])
