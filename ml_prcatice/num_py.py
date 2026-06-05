@@ -153,10 +153,20 @@ print(np.std(arr))
 
 
 
-import numpy as np  
+# import numpy as np  
+# arr1 = np.array([[10,11,12,13] , 
+#                  [14,15,16,17],
+#                  [39,90,40,60]])
+# print(np.sum(arr1,axis= 0))#it's column sum  
+# print(np.sum(arr1,axis=1)) #it's row sum  
+# print(arr1[1,2])
+
+
 arr1 = np.array([[10,11,12,13] , 
                  [14,15,16,17],
                  [39,90,40,60]])
-print(np.sum(arr1,axis= 0))#it's column sum  
-print(np.sum(arr1,axis=1)) #it's row sum  
-print(arr1[1,2])
+arr = np.array([1,42,5,20,39,49,20,503,29])
+print(arr[[4,-2]])
+
+print(arr1[2,[0,2]])
+print(arr1[0,[2,3]])
