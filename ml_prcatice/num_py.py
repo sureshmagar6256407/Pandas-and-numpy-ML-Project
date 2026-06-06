@@ -181,15 +181,21 @@ print(np.std(arr))
 
 
 
-import numpy as np  
-arr = np.array ([39,492,49,29])
-print(arr[ 1:2])
-print(arr[:3])
-print(arr[::2])
-print(arr[::-1])
+# import numpy as np  
+# arr = np.array ([39,492,49,29])
+# print(arr[ 1:2])
+# print(arr[:3])
+# print(arr[::2])
+# print(arr[::-1])
 
-arr1  = np.array ([[1,39,294,50] , 
-                   [49,29, 50 ,29]])
-print(arr1[0 , 2:])
-print(arr1[1, 0:1])
-print(arr1[ : ,  :1])
+# arr1  = np.array ([[1,39,294,50] , 
+#                    [49,29, 50 ,29]])
+# print(arr1[0 , 2:])
+# print(arr1[1, 0:1])
+# print(arr1[ : ,  :1])
+
+
+
+import numpy  as np  
+arr  = np.array([3,4,5,2])
+print(arr.reshape(2,2))
