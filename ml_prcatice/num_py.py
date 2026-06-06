@@ -196,11 +196,29 @@ print(np.std(arr))
 
 
 
-import numpy  as np  
-arr  = np.array([3,4,5,2])
-print(arr.reshape(2,2))
+# import numpy  as np  
+# arr  = np.array([3,4,5,2])
+# print(arr.reshape(2,2))
 
 
-arr1 = np.array([[1,3,4,5] , [4,5,2,6]])
-print(arr1.flatten())
-print(arr1.ravel())
+# arr1 = np.array([[1,3,4,5] , [4,5,2,6]])
+# print(arr1.flatten())
+# print(arr1.ravel())
+
+
+
+import numpy as np  
+arr = np.array ([10,30,29,40])
+print(arr)
+new =  np.insert(arr , 1,[49,39] , axis= None)
+print(new)
+
+arr1  = np.array ([[2,3,4,5] ,  
+                   [4,5,6,6]])
+print(arr1)
+new1  = np.insert(arr1,1,([10,15]) ,axis= 1)
+print(new1)
+ra  = new1.ravel()
+print(ra)
+res  = new1.reshape(5,2)
+print(res)
