@@ -199,3 +199,8 @@ print(np.std(arr))
 import numpy  as np  
 arr  = np.array([3,4,5,2])
 print(arr.reshape(2,2))
+
+
+arr1 = np.array([[1,3,4,5] , [4,5,2,6]])
+print(arr1.flatten())
+print(arr1.ravel())
