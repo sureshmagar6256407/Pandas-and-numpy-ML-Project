@@ -245,16 +245,16 @@ print(np.std(arr))
 # print(new1)
 
 
-import numpy as np  
-arr1  = np.array([2,3,4])
-arr2  = np.array([3,5,2])
-newarr = np.concatenate((arr1,arr2))
-print(newarr)
+# import numpy as np  
+# arr1  = np.array([2,3,4])
+# arr2  = np.array([3,5,2])
+# newarr = np.concatenate((arr1,arr2))
+# print(newarr)
 
 
-arr3   = np.array([[3,4,5,2] , 
-                   [4,5,2,5]])
-arr4  = np.array([[4,4,2,5] , 
-                  [5,7,8,2]])
-newarr1  =  np.concatenate ((arr3,arr4) ,axis= 1)
-print(newarr1)
+# arr3   = np.array([[3,4,5,2] , 
+#                    [4,5,2,5]])
+# arr4  = np.array([[4,4,2,5] , 
+#                   [5,7,8,2]])
+# newarr1  =  np.concatenate ((arr3,arr4) ,axis= 0)
+# print(newarr1)
