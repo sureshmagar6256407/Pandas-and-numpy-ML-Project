@@ -207,18 +207,30 @@ print(np.std(arr))
 
 
 
-import numpy as np  
-arr = np.array ([10,30,29,40])
-print(arr)
-new =  np.insert(arr , 1,[49,39] , axis= None)
-print(new)
+# import numpy as np  
+# arr = np.array ([10,30,29,40])
+# print(arr)
+# new =  np.insert(arr , 1,[49,39] , axis= None)
+# print(new)
 
-arr1  = np.array ([[2,3,4,5] ,  
-                   [4,5,6,6]])
-print(arr1)
-new1  = np.insert(arr1,1,([10,15]) ,axis= 1)
-print(new1)
-ra  = new1.ravel()
-print(ra)
-res  = new1.reshape(5,2)
-print(res)
+# arr1  = np.array ([[2,3,4,5] ,  
+#                    [4,5,6,6]])
+# print(arr1)
+# new1  = np.insert(arr1,1,([10,15]) ,axis= 1)
+# print(new1)
+# ra  = new1.ravel()
+# print(ra)
+# res  = new1.reshape(5,2)
+# print(res)
+
+
+import numpy as np  
+arr    =   np.array ([10,20,30])
+newArr  = np.append(arr,[50,50])
+print(newArr)
+
+ARR1  = np.array ([[39,29,49,20] ,
+                    [49,29,50,29]])
+# newarr = np.append(ARR1 ,[[3,4] ,[59,39]],axis= 1)
+newarr   = np.append(ARR1 , [[39,49,29,49] ], axis= 0)
+print(newarr)
