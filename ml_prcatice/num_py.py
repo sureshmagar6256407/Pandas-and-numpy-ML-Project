@@ -273,15 +273,26 @@ print(np.std(arr))
 # newarr1   = np.delete(arr1 ,2,axis=1 )
 # print(newarr1)
 
-import numpy as np  
-arr1  = np.array([1,2,3])
-arr2  = np.array ( [3,4,5])
+# import numpy as np  
+# arr1  = np.array([1,2,3])
+# arr2  = np.array ( [3,4,5])
 
-print(np.vstack((arr1,arr2)))
-print(np.hstack((arr1,arr2))) 
+# print(np.vstack((arr1,arr2)))
+# print(np.hstack((arr1,arr2))) 
+# arr3 = np.array ( [[39,92] , [39,10]])
+# arr4  = np.array([[49,29] , [48,21]])
+# print(np.vstack((arr3,arr4)))
+# print(np.hstack((arr3,arr4)))
 
 
-arr3 = np.array ( [[39,92] , [39,10]])
-arr4  = np.array([[49,29] , [48,21]])
-print(np.vstack((arr3,arr4)))
-print(np.hstack((arr3,arr4)))
+import numpy as nnp 
+arr  = np.array ([10,30,20,49,28,44])
+print(np.split(arr,3))  
+print(np.hsplit(arr,2))
+
+
+arr1  = np.eye(3,4)
+print(arr1)
+print(np.vsplit(arr1 ,3))
+print(np.hsplit(arr1,2))
+print(np.split(arr,2,axis=0))
