@@ -298,8 +298,19 @@ print(np.std(arr))
 # print(np.split(arr,2,axis=0))
 
 
+# import numpy as np 
+# matrix  = np.array ([[1,2,3] , [4,5,6]]) 
+# vector = np.array([10,20,30])
+# result  = matrix + vector 
+# print(result)
+
+
 import numpy as np 
-matrix  = np.array ([[1,2,3] , [4,5,6]]) 
-vector = np.array([10,20,30])
-result  = matrix + vector 
+arr1  = np.array ([[1,2,3] , [
+    4,5,6
+] ])
+arr2 = np.array([1,2])
+res  = arr2.reshape(2,1)
+  
+result = arr1 + res 
 print(result)
