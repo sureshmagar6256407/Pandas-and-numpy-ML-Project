@@ -258,3 +258,17 @@ print(np.std(arr))
 #                   [5,7,8,2]])
 # newarr1  =  np.concatenate ((arr3,arr4) ,axis= 0)
 # print(newarr1)
+
+
+import numpy as np  
+arr = np.array ( [10,3,20,49])
+print(arr)
+newarr = np.delete(arr,1,axis=None)
+print(newarr)
+
+
+arr1 = np.array ([[39,29,50,11] ,  
+                  [44,19,58,18]])
+print(arr1)
+newarr1   = np.delete(arr1 ,2,axis=1 )
+print(newarr1)
