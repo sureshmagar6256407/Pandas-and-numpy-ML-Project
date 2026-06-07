@@ -260,15 +260,28 @@ print(np.std(arr))
 # print(newarr1)
 
 
+# import numpy as np  
+# arr = np.array ( [10,3,20,49])
+# print(arr)
+# newarr = np.delete(arr,1,axis=None)
+# print(newarr)
+
+
+# arr1 = np.array ([[39,29,50,11] ,  
+#                   [44,19,58,18]])
+# print(arr1)
+# newarr1   = np.delete(arr1 ,2,axis=1 )
+# print(newarr1)
+
 import numpy as np  
-arr = np.array ( [10,3,20,49])
-print(arr)
-newarr = np.delete(arr,1,axis=None)
-print(newarr)
+arr1  = np.array([1,2,3])
+arr2  = np.array ( [3,4,5])
+
+print(np.vstack((arr1,arr2)))
+print(np.hstack((arr1,arr2))) 
 
 
-arr1 = np.array ([[39,29,50,11] ,  
-                  [44,19,58,18]])
-print(arr1)
-newarr1   = np.delete(arr1 ,2,axis=1 )
-print(newarr1)
+arr3 = np.array ( [[39,92] , [39,10]])
+arr4  = np.array([[49,29] , [48,21]])
+print(np.vstack((arr3,arr4)))
+print(np.hstack((arr3,arr4)))
