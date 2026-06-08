@@ -129,3 +129,4 @@ plt.ylabel("Predicted Price")
 plt.title("Actual vs Predicted Price")
 plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--')  # Line for perfect predictions
 plt.show()
+
