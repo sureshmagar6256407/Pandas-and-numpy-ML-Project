@@ -1,5 +1,6 @@
 
-import numpy  as np  
+import numpy  as np
+
 
 class ChargingAnalysis : 
     def  __init__(self , battery_health , charging_time , energy_consumption) -> None:  
@@ -8,11 +9,40 @@ class ChargingAnalysis :
         self.energy_consumption = energy_consumption  
 
 
+    def Basic_Battery_Analysis (self) : 
+        EB_ABH   =  np.mean(self.battery_health , axis= 1 , keepdims= True)
+        print(f"Every EV Average Battery health : \n {EB_ABH}")
+        print()
+
+        EB_LBH = np.min (self.battery_health , axis= 1 , keepdims= True)
+        print(f"Every EV Battery lowest battery health is : \n {EB_LBH}")
+        print()
+
+        EB_HBH  = np.max(self.battery_health , axis= 1 , keepdims= True)
+        print(f"every EV  battery highest battery health is : \n {EB_HBH}")
+        print()
+
+        EB_LBHI  = np.argmin(self.battery_health , axis=1 , keepdims= True)
+        print(f"every EV battery Lowest battery health day index is : \n {EB_LBHI}")
+        print()
+
+        HBH  = np.max(self.battery_health)
+        print(f"all EV battery highest battery health is : \n {HBH}")
+        print()
+
+        LBH  = np.min(self.battery_health )
+        print(f"all EV battery lowest battery health is : \n {LBH}")
+        print()
+
+        ED_ABH  = np.mean(self.battery_health ,axis= 0, keepdims= True)
+        print(f"every day average battery health is : {ED_ABH}")
+        print()
+
+
+
+
 
 def main() : 
-    c1  = ChargingAnalysis
-
-    
     # Rows = Electric vehicles, Columns = 7 days
     battery_health = np.array([
         [98, 97, 97, 96, 96, 95, 95],
@@ -41,5 +71,8 @@ def main() :
         [18, 19, 18, 20, 19, 20, 19]
     ])
 
-if __name__ == "__main___" : 
+    c1  = ChargingAnalysis (battery_health , charging_time , energy_consumption)
+    c1.Basic_Battery_Analysis()
+
+if __name__ == "__main__" : 
     main()
