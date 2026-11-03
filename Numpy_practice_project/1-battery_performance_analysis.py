@@ -1,7 +1,6 @@
 
 import numpy  as np
 
-
 class ChargingAnalysis : 
     def  __init__(self , battery_health , charging_time , energy_consumption) -> None:  
         self.battery_health = battery_health 
@@ -76,3 +75,6 @@ def main() :
 
 if __name__ == "__main__" : 
     main()
+
+
+
