@@ -1,4 +1,6 @@
-import numpy as np  
+import numpy as np
+from pandas.core.apply import Axis
+from psutil import AIX  
 
 class ChargingAnalysis : 
     def  __init__(self , battery_health , charging_time , energy_consumption) -> None:  
@@ -58,9 +60,27 @@ class ChargingAnalysis :
         print(f"charging time >= 55 is : {len(ten)}")
         print()
 
+    def basic_energy_consumption (self) : 
+        eleven  = np.sum(self.energy_consumption ,axis= 1 , keepdims= True)
+        print(f"Every EV total energy consumption is : \n {eleven}")
+        print()
+
+        twelve  = np.argmax(np.max(self.energy_consumption ,axis= 1))
+        print(f"highest energy consumption  EV is : {twelve}")
+        print()
+
+        thirteen  =  np.max(self.energy_consumption , axis= 1  ,  keepdims= True)
+        print(f"Every Energy max energy consumption is : \n {thirteen}")
+        print()
+
+        fourteen  = self.energy_consumption[self.energy_consumption >=20]
+        print(f"Energy consumption >= 20 : {fourteen}")
+        print()
+        
 
 
-def main() : 
+
+def main() :
     # Rows = Electric vehicles, Columns = 7 days
     battery_health = np.array([
         [98, 97, 97, 96, 96, 95, 95],
@@ -92,6 +112,7 @@ def main() :
     c1  = ChargingAnalysis (battery_health , charging_time , energy_consumption)
     c1.Basic_Battery_Analysis()
     c1.Basic_Charging_Analysis()
+    c1.basic_energy_consumption()
 
 if __name__ == "__main__" : 
     main()
