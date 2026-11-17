@@ -1,5 +1,4 @@
-
-import numpy  as np
+import numpy as np  
 
 class ChargingAnalysis : 
     def  __init__(self , battery_health , charging_time , energy_consumption) -> None:  
@@ -38,6 +37,26 @@ class ChargingAnalysis :
         print()
 
 
+    def Basic_Charging_Analysis (self) : 
+        ET_CT   = np.sum(self.charging_time , axis= 1 ,keepdims= True)
+        print(f"Every EV Total charging time is : \n {ET_CT}")
+        print()
+
+        EE_CT  = np.mean(self.charging_time , axis= 1 , keepdims= True)
+        print(f"Every Ev   Average charging time is : \n {EE_CT}")
+        print()
+
+        highest_Charging_Ev  = np.argmax(np.max(self.charging_time ,axis= 1 ))
+        print(f"Highest chargint Ev is : {highest_Charging_Ev}")  
+        print()
+
+        nine  =  np.mean(self.charging_time , axis= 0 , keepdims= True)
+        print(f"Every day average charging time is : {nine}")
+        print()  
+
+        ten = self.charging_time[self.charging_time >= 55]     
+        print(f"charging time >= 55 is : {len(ten)}")
+        print()
 
 
 
@@ -72,6 +91,7 @@ def main() :
 
     c1  = ChargingAnalysis (battery_health , charging_time , energy_consumption)
     c1.Basic_Battery_Analysis()
+    c1.Basic_Charging_Analysis()
 
 if __name__ == "__main__" : 
     main()
