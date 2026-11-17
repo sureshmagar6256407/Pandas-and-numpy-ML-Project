@@ -10,8 +10,8 @@ class ChargingAnalysis :
 
 
     def Basic_Battery_Analysis (self) : 
-        EB_ABH   =  np.mean(self.battery_health , axis= 1 , keepdims= True)
-        print(f"Every EV Average Battery health : \n {EB_ABH}")
+        self.EB_ABH   =  np.mean(self.battery_health , axis= 1 , keepdims= True)
+        print(f"Every EV Average Battery health : \n {self.EB_ABH}")
         print()
 
         EB_LBH = np.min (self.battery_health , axis= 1 , keepdims= True)
@@ -60,7 +60,7 @@ class ChargingAnalysis :
         print(f"charging time >= 55 is : {len(ten)}")
         print()
 
-    def basic_energy_consumption (self) : 
+    def Basic_Energy_Consumption (self) : 
         eleven  = np.sum(self.energy_consumption ,axis= 1 , keepdims= True)
         print(f"Every EV total energy consumption is : \n {eleven}")
         print()
@@ -76,6 +76,41 @@ class ChargingAnalysis :
         fourteen  = self.energy_consumption[self.energy_consumption >=20]
         print(f"Energy consumption >= 20 : {fourteen}")
         print()
+
+    def Advanced_Numpy(self) : 
+        cond1  =   [ 
+            self.battery_health >= 95 , 
+            self.battery_health >= 85  , 
+            self.battery_health < 85 
+        ]
+        choices  =["Excellent" ,"Good" ,"Need Attention"]  
+        fifteen  = np.select(cond1 , choices , default="")
+        print(F"battery health classification : \n {fifteen}")
+        print()
+
+
+        minimum_health  = np.min(self.battery_health ,axis= 1 , keepdims= True)  
+        print(minimum_health)   
+        maximum_health  = np.max(self.battery_health , axis= 1  , keepdims= True)
+        print(maximum_health)
+        sixteen  =   maximum_health  - minimum_health  
+        print(f"Every Ev battery health fluctuation is :  {sixteen}")
+        print()  
+
+        seventeen  = np.argmax(sixteen )
+        print(f"highest fluctuation EV is :  {seventeen}")
+        print()
+
+        eighteen  = np.argwhere (self.battery_health  < 85)
+        print(f"battery health  < 85 : {eighteen}")  
+        print() 
+
+
+        nineteen = self.EB_ABH / np.mean(self.energy_consumption , axis= 1)
+        print(f"Energy efficient indicator : {nineteen}")
+        print()
+
+
         
 
 
@@ -112,7 +147,8 @@ def main() :
     c1  = ChargingAnalysis (battery_health , charging_time , energy_consumption)
     c1.Basic_Battery_Analysis()
     c1.Basic_Charging_Analysis()
-    c1.basic_energy_consumption()
+    c1.Basic_Energy_Consumption()
+    c1.Advanced_Numpy()
 
 if __name__ == "__main__" : 
     main()
