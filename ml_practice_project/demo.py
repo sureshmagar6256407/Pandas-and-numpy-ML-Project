@@ -1,0 +1,67 @@
+
+import pandas as pd 
+from sklearn.model_selection import train_test_split  
+from sklearn.linear_model  import LinearRegression  
+from sklearn.metrics import mean_squared_error , r2_score  
+import joblib as jlb  
+
+data = {
+"Student": [1,2,3,4,5],
+"Hours_Studied": [5,8,3,10,6],
+"Attendance_%": [80,90,70,95,85],
+"Previous_Score": [70,80,60,85,75],
+"Final_Score": [75,85,65,90,80]
+}
+
+df  = pd.DataFrame(data)  
+# print(df)
+
+#features   and target  
+X  = df[["Hours_Studied","Attendance_%","Previous_Score"]]  
+y = df["Final_Score"]
+
+#split the data 
+X_train,X_test, y_train,y_test  = train_test_split(X,y , test_size=0.2, random_state= 42)   
+
+#mode train  
+model  = LinearRegression()
+model.fit(X_train,y_train)
+  
+
+#model predict  
+y1 = model.predict(X_test) 
+# print(y1)
+# print(y_test)
+
+y2 = model.predict([[6,90,85]])
+print(y2)
+# print(model.coef_)
+# print(model.intercept_)
+
+mse  = mean_squared_error(y_test,y1) 
+print(mse)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
