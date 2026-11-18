@@ -18,13 +18,36 @@ print(df.shape)
 print()
 print(df.columns)  
 print()
+
 "--------- format making the correctly----------"
 string_col  = df.select_dtypes (include=["object" , "string"]).columns   
 for col in string_col : 
-    df[col]  = df[col].str.strip().str.title()
+    df[col]  = df[col].str.strip().str.title()  
 
 num_col    = df.select_dtypes(include=["number"]).columns
-df[num_col]   = df[num_col].abs()
-
 for col in num_col : 
-    df[num_col]   = pd.to_numeric (df[num_col] , errors="coerce")
+    df[col]   = pd.to_numeric (df[col] , errors="coerce")  
+
+df["Seats_Booked"]  = df["Seats_Booked"].abs()
+df["Fare_Per_Seat"]  = df["Fare_Per_Seat"].abs()
+
+
+"------- handling the missing value and duplicate ----------"
+print(df.drop_duplicates(inplace= True))
+print(df.duplicated().sum().sum())
+print()
+
+
+df.fillna ( 
+    {
+        "Route" : "Unknown" , 
+        "Bus_Type" : "Unknown"   , 
+        "Payment_Method" : "Unknown" ,   
+        "Booking_Status" : "Unknown"
+    }
+,
+    inplace= True
+)
+print(df.isnull().sum())
+
+
