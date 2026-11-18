@@ -16,4 +16,15 @@ print(df.describe())
 print()
 print(df.shape)
 print()
-print(df.columns)
+print(df.columns)  
+print()
+"--------- format making the correctly----------"
+string_col  = df.select_dtypes (include=["object" , "string"]).columns   
+for col in string_col : 
+    df[col]  = df[col].str.strip().str.title()
+
+num_col    = df.select_dtypes(include=["number"]).columns
+df[num_col]   = df[num_col].abs()
+
+for col in num_col : 
+    df[num_col]   = pd.to_numeric (df[num_col] , errors="coerce")
